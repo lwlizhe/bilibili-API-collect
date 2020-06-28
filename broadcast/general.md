@@ -6,11 +6,11 @@
 
 *方式：GET*
 
-**参数：**
+**url参数：**
 
 | 参数名   | 类型 | 内容     | 必要性 | 备注                              |
 | -------- | ---- | -------- | ------ | --------------------------------- |
-| platform | url  | 平台选择 | 必要   | 为web时输出域名<br />其他时输出ip |
+| platform | str  | 平台选择 | 必要   | 为web时输出域名<br />其他时输出ip |
 
 **json回复：**
 
@@ -32,7 +32,7 @@
 | ws_port       | num    | websocket端口      |      |
 | wss_port      | num    | websocket ssl端口  |      |
 | heartbeat     | num    | 最大心跳包间隔时间 |      |
-| nodes         | arrary | 服务节点地址列表   |      |
+| nodes         | array | 服务节点地址列表   |      |
 | backoff       | obj    | ？？？             |      |
 | heartbeat_max | num    | ？？？             |      |
 

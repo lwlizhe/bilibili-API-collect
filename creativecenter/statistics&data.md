@@ -226,11 +226,11 @@ http://member.bilibili.com/x/web/data/article
 
 数据为前30天
 
-**参数：**
+**url参数：**
 
 | 参数名 | 类型 | 内容         | 必要性 | 备注           |
 | ------ | ---- | ------------ | ------ | -------------- |
-| type   | url  | 目标数据类型 | 必要   | 类型代码见下表 |
+| type   | num  | 目标数据类型 | 必要   | 类型代码见下表 |
 
 类型代码`type`：
 
@@ -317,11 +317,11 @@ http://member.bilibili.com/x/web/data/pandect?type=1
 
 数据为前30天
 
-**参数：**
+**url参数：**
 
 | 参数名 | 类型 | 内容         | 必要性 | 备注           |
 | ------ | ---- | ------------ | ------ | -------------- |
-| type   | url  | 目标数据类型 | 必要   | 类型代码见下表 |
+| type   | num  | 目标数据类型 | 必要   | 类型代码见下表 |
 
 类型代码`type`：
 
@@ -403,11 +403,11 @@ http://member.bilibili.com/x/web/data/article/thirty?type=1
 
 数据为上一天的
 
-**参数：**
+**url参数：**
 
 | 参数名 | 类型 | 内容         | 必要性 | 备注           |
 | ------ | ---- | ------------ | ------ | -------------- |
-| type   | url  | 目标数据类型 | 必要   | 类型代码见下表 |
+| type   | num  | 目标数据类型 | 必要   | 类型代码见下表 |
 
 类型代码`type`：
 
@@ -443,7 +443,7 @@ http://member.bilibili.com/x/web/data/article/thirty?type=1
 
 | 字段      | 类型   | 内容         | 备注 |
 | --------- | ------ | ------------ | ---- |
-| arc_inc   | arrary | 稿件情况     |      |
+| arc_inc   | array | 稿件情况     |      |
 | total_inc | num    | 总计增长情况 |      |
 | type_rank | obj    | 分区排名情况 |      |
 

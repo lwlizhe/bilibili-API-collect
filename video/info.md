@@ -2,18 +2,18 @@
 
 <img src="/imgs/ploading.gif" width="100" height="100"/>
 
-## 视频详细信息（avID/bvID互转及转epID）
+## 获取视频详细信息（avID/bvID互转及转epID）
 
 > http://api.bilibili.com/x/web-interface/view
 
 *方式:GET*
 
-**参数：**
+**url参数：**
 
-| 参数名 | 类型 | 内容     | 必要性 | 备注               |
-| ------ | ---- | -------- | ------ | ------------------ |
-| aid    | url  | 视频avID | 非必要 | avID与bvID任选一个 |
-| bvid   | url  | 视频bvID | 非必要 | avID与bvID任选一个 |
+| 参数名 | 类型 | 内容     | 必要性       | 备注               |
+| ------ | ---- | -------- | ------------ | ------------------ |
+| aid    | num  | 视频avID | 必要（可选） | avID与bvID任选一个 |
+| bvid   | str  | 视频bvID | 必要（可选） | avID与bvID任选一个 |
 
 **json回复：**
 
@@ -349,18 +349,18 @@ http://i0.hdslb.com/bfs/face/5387950a59be8038daaae3f66dfb5a85e20d5737.jpg
 
 
 
-## 视频简介
+## 获取视频简介
 
 > http://api.bilibili.com/x/web-interface/archive/desc
 
 *方式:GET*
 
-**参数：**
+**url参数：**
 
-| 参数名 | 类型 | 内容     | 必要性 | 备注               |
-| ------ | ---- | -------- | ------ | ------------------ |
-| aid    | url  | 视频avID | 非必要 | avID与bvID任选一个 |
-| bvid   | url  | 视频bvID | 非必要 | avID与bvID任选一个 |
+| 参数名 | 类型 | 内容     | 必要性       | 备注               |
+| ------ | ---- | -------- | ------------ | ------------------ |
+| aid    | num  | 视频avID | 必要（可选） | avID与bvID任选一个 |
+| bvid   | str  | 视频bvID | 必要（可选） | avID与bvID任选一个 |
 
 **json回复：**
 
@@ -392,18 +392,18 @@ http://api.bilibili.com/x/web-interface/archive/desc?aid=39330059
 
 
 
-## 视频分P列表  (avID/bvID转CID)
+## 查询视频分P列表  (avID/bvID转CID)
 
 > http://api.bilibili.com/x/player/pagelist
 
 *方式:GET*
 
-**参数：**
+**url参数：**
 
-| 参数名 | 类型 | 内容     | 必要性 | 备注               |
-| ------ | ---- | -------- | ------ | ------------------ |
-| aid    | url  | 视频avID | 非必要 | avID与bvID任选一个 |
-| bvid   | url  | 视频bvID | 非必要 | avID与bvID任选一个 |
+| 参数名 | 类型 | 内容     | 必要性       | 备注               |
+| ------ | ---- | -------- | ------------ | ------------------ |
+| aid    | num  | 视频avID | 必要（可选） | avID与bvID任选一个 |
+| bvid   | str  | 视频bvID | 必要（可选） | avID与bvID任选一个 |
 
 **json回复：**
 

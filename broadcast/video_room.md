@@ -10,9 +10,9 @@
 | -------- | ------ | -------- | ------------------------------ |
 | room_id  | str    | 目标视频 | `video://{视频avID}/{视频CID}` |
 | platform | str    | 平台标识 | 默认为`web`                    |
-| accepts  | arrary | 操作标识 |                                |
+| accepts  | array | 操作标识 |                                |
 
-`arrary`数组：
+`array`数组：
 
 | 项   | 类型 | 内容 | 备注 |
 | ---- | ---- | ---- | ---- |
@@ -128,7 +128,7 @@
 
 | 项   | 类型 | 内容         | 备注                                                         |
 | ---- | ---- | ------------ | ------------------------------------------------------------ |
-| 0    | str  | 弹幕属性信息 | 详见[「弹幕」中的属性 p](https://github.com/SocialSisterYi/bilibili-API-collect/blob/master/danmaku/danmaku.md) |
+| 0    | str  | 弹幕属性信息 | 详见[「弹幕」中的属性 p](https://github.com/SocialSisterYi/bilibili-API-collect/blob/master/danmaku/danmaku_xml.md) |
 | 1    | str  | 弹幕内容     |                                                              |
 
 **示例：**

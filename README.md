@@ -1,16 +1,29 @@
-<img src="/imgs/Mylogo.png" align="right" width="250" height="200"/>
+<p align="center">
+    <img src="http://i0.hdslb.com/bfs/album/1ba8228cc208a12ac17f73a160081a0918ab7d14.png" width="250" height="200"/>
+<p/>
+<h1 align="center">哔哩哔哩-API收集整理</h1>
+<p align="center">
+    <a href="https://github.com/SocialSisterYi/bilibili-API-collect/issues" style="text-decoration:none">
+        <img src="https://img.shields.io/github/issues/SocialSisterYi/bilibili-API-collect.svg" alt="GitHub issues"/>
+    </a>
+    <a href="https://github.com/SocialSisterYi/bilibili-API-collect/stargazers" style="text-decoration:none" >
+        <img src="https://img.shields.io/github/stars/SocialSisterYi/bilibili-API-collect.svg" alt="GitHub stars"/>
+    </a>
+    <a href="https://github.com/SocialSisterYi/bilibili-API-collect/network" style="text-decoration:none" >
+        <img src="https://img.shields.io/github/forks/SocialSisterYi/bilibili-API-collect.svg" alt="GitHub forks"/>
+    </a>
+    <a href="https://github.com/SocialSisterYi/bilibili-API-collect/blob/master/LICENSE" style="text-decoration:none" >
+        <img src="https://img.shields.io/github/license/SocialSisterYi/bilibili-API-collect.svg" alt="GitHub license"/>
+    </a>
+</p>
 
-# 哔哩哔哩-API收集整理
-
-**野生API文档**
-
-**不断更新中....**
-
-本项目对B站web端散落在世界各地的野生api进行收集整理，以及研究使用方法并对其进行说明
+<h3 align="center">野生API文档</h3> 
+<h3 align="center">不断更新中....</h3> 
+本项目旨在对B站web端、移动端以及TV端散落在世界各地的野生api进行收集整理，研究使用方法并对其进行说明，运用了黑箱法、控制变量法、js逆向分析法、网络抓包法等研究办法
 
 所有api均为标准http协议，返回值大都为json
 
-<img src="/imgs/bilibili.svg" width="200" height="100"/>
+---
 
 计划整理分类&目录：（√代表已完成，x代表正在施工...）
 
@@ -21,9 +34,11 @@
   - 密码&短信登录
   - qq&微博登录
   - [登录基本信息](login/login_info.md)√
-  - [消息](login/msg.md)x
-  - [私信](login/private_msg.md)x
   - [个人中心](login/member_center.md)×
+- [消息中心](message)
+  - [通知类消息](message/msg.md)×
+  - [私信](message/private_msg.md)×
+  - [设置](message/config.md)×
 - [用户](user)
   - [基本信息](user/info.md)√
   - [状态数](user/status_number.md)√
@@ -38,25 +53,30 @@
   - [点赞&投币&收藏](video/like_coin_fav.md)√
   - [TAG](video/tags.md)x
   - [视频推荐](video/recommend.md)√
-  - 播放&下载地址
+  - [播放&下载地址（视频流）](video/videostream_url.md)√
   - 互动视频
   - [高能进度条](video/pbp.md)√
+  - [信息上报（心跳及记录历史）](video/report.md)×
 - 番剧（影视）
   - 基本信息
   - 状态数
   - 操作
 - [视频弹幕](danmaku)
-  - [实时弹幕&弹幕格式](danmaku/danmaku.md)√
-  - [历史弹幕](danmaku/history.md)√
+  - protobuf实时弹幕
+  - [xml实时弹幕](danmaku/danmaku_xml.md)√
+  - [xml历史弹幕](danmaku/history.md)√
   - [快照](danmaku/snapshot.md)√
   - [弹幕操作](danmaku/action.md)×
 - [专栏](article)
   - [基本信息](article/info.md)×
-  - 点赞&投币&收藏
+  - [点赞&投币&收藏](article/like_coin_fav.md)×
   - 文集基本信息
-- 音频
-  - 歌曲相关
-  - 歌单相关
+- [音频](music)
+  - [歌曲基本信息](music/info.md)√
+  - [歌单&音频收藏夹详细信息](music/music_list.md)×
+  - [状态数](music/status_number.md)×
+  - [投币&收藏](music/coin&fav.md)×
+  - 播放&下载地址（音频流）
   - 音频榜单
 - [排行榜&最新动态](ranking&dynamic)
   - [排行榜](ranking&dynamic/ranking.md)x
@@ -67,11 +87,12 @@
 - [小黑屋](blackroom)
   - [封禁公示](blackroom/banlist.md)√
   - 仲裁信息
-- 评论区
-  - 评论区明细
-  - 表情
-  - 发表评论
-  - 评论操作
+- [评论区](comment)
+  - [评论区明细](comment/comment_list.md)√
+  - [操作](comment/action.md)√
+- [表情](emoji)
+  - [表情及表情包信息](emoji/emoji_list.md)×
+  - 操作
 - [创作中心](creativecenter)
   - [统计与数据](creativecenter/statistics&data.md)x
   - 列表查询相关
@@ -84,6 +105,7 @@
   - [B币方式](electric/Bcoin.md)√
   - [微信&支付宝方式](electric/WeChat&Alipay.md)√
   - [充电留言](electric/charge_msg.md)√
+  - [充电列表](electric/charge_list.md)√
 - [动态](dynamic)
   - [发送&转载动态](dynamic/publish.md)x
   - 动态列表
@@ -91,16 +113,23 @@
   - 小视频
   - 操作
 - [历史记录&稍后再看](history&toview)
-  - [历史记录](history&toview/play_history.md)√
+  - [历史记录](history&toview/history.md)√
   - [稍后再看](history&toview/toview.md)√
 - 收藏夹
-- 课程
+- [课程](cheese)
+  - [课程基本信息](cheese/info.md)√
+  - 已购课程
+  - 分区推荐列表
+  - 操作
+  - [播放&下载地址（视频流）](cheese/videostream_url.md)√
 - [直播](live)
   - [直播间基本信息](live/info.md)x
+  - [直播分区](live/live_area.md)×
   - [直播间管理](live/manage.md)×
   - 直播间操作
   - 直播视频流
   - 直播信息流
+- 答题
 - B币钱包
   - 基本信息
   - B币充值
@@ -108,9 +137,10 @@
 - 哔哩哔哩漫画
 - 哔哩哔哩游戏
 - [其他](other)
-  - [ip位置查询](other/ip.md)√
+  - [基于ip的地理位置查询](other/ip.md)√
+  - [获取当前时间戳](other/time_stamp.md)√
 
-B站专栏同步推出[《B站api研究记》](https://www.bilibili.com/read/readlist/rl207146)系列，欢迎关注
+B站专栏同步推出[《B站api研究记》](https://www.bilibili.com/read/readlist/rl207146)系列（更新状态：咕咕......），~~欢迎关注~~
 
 **注意：请勿滥用，仅用于学习和测试！**
 
@@ -145,6 +175,8 @@ https://github.com/czp3009/bilibili-api
 https://github.com/Vespa314/bilibili-api
 
 https://github.com/Hsury/Bilibili-Toolkit
+
+ https://github.com/adachi-sakura/openbilibili-go-common-1 
 
 成品：
 
